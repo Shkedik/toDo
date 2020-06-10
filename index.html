@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>ToDo List</title>
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+</head>
+<body>
+    <div class="div-search">
+            <input type="text"
+            id="search"
+            placeholder="Search"
+            class="search"
+            (onkeyup)="serchWithSelect()">
+
+            <select id="select" 
+            class="select" 
+            aria-placeholder="select option">
+                <option value="none">All To Do </option>
+                <option value="Author">Author</option>
+                <option value="To Do">To Do</option>
+            </select>
+            <br>
+    </div>
+    <div class="div-for-table" id="div-for-table">
+        <table border="1" id="table-head" class="table">
+            <caption class="title-table">Create ToDo list</caption>
+            <tr>
+                <th>Name Author
+                    <button type="submit"
+                    id="sort-authors"
+                    onclick="sortFields('nameAuthor')">Sort</button>
+                </th>
+                <th>Date Created
+                    <button type="submit"
+                    id="sort-date"
+                    onclick="sortFields('dateCreated')">Sort</button>
+                </th>
+                <th>To Do
+                    <button type="submit"
+                    id="sort-to-do"
+                    onclick="sortFields('toDo')">Sort</button>
+                </th>
+                <th class="click">Click</th>
+            </tr>
+            <tr>
+                <td><input type="text"
+                id="name-author"
+                placeholder="Name Author"
+                class="name-author input-field-head">
+                </td>
+                <td><input type="date"
+                id="date-created"
+                placeholder="Date Created"
+                class="date-created input-field-head">
+                </td>
+                <td><input type="text"
+                id="to-do"
+                placeholder="To Do"
+                class="to-do input-field-head">
+                </td>
+                <td>
+    <button id="add" type = "submit" class="btn-add btn">Add</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
